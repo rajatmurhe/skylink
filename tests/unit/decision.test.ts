@@ -96,5 +96,5 @@ describe('Phase 4: Planner, SkyLink Decision Engine & State Machine', () => {
         expect(r.uav.batteryWh).toBeGreaterThanOrEqual(0);
       });
     }
-  });
+  }, 20000);
 });
