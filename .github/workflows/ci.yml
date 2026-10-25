@@ -28,3 +28,6 @@ jobs:
 
       - name: Build Production Static Bundle
         run: npm run build
+
+      - name: Check production simulation workers
+        run: npm run test:workers
