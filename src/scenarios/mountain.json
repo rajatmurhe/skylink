@@ -1,0 +1,65 @@
+{
+  "id": "mountain_relief",
+  "name": "Mountain Valley Relief Delivery",
+  "description": "Navigate deep mountain valleys shadowed by steep granite ridges to deliver emergency medical payloads.",
+  "difficulty": "Moderate",
+  "initialBatteryWh": 100,
+  "world": {
+    "mapSize": { "width": 2000, "height": 2000 },
+    "homePosition": { "x": 200, "y": 200 },
+    "geofence": { "xMin": 0, "xMax": 2000, "yMin": 0, "yMax": 2000 },
+    "towers": [
+      {
+        "id": "tower_valley_1",
+        "name": "Valley West Repeater",
+        "position": { "x": 400, "y": 500 },
+        "txPowerDbm": 32,
+        "height": 30,
+        "loadFactor": 0.1,
+        "isOnline": true
+      },
+      {
+        "id": "tower_valley_2",
+        "name": "Valley East Repeater",
+        "position": { "x": 1600, "y": 1500 },
+        "txPowerDbm": 32,
+        "height": 30,
+        "loadFactor": 0.1,
+        "isOnline": true
+      }
+    ],
+    "obstacles": [
+      {
+        "id": "obs_granite_ridge",
+        "name": "Central Granite Ridge",
+        "bounds": { "xMin": 800, "xMax": 1200, "yMin": 200, "yMax": 1800 },
+        "attenuationDb": 30
+      }
+    ],
+    "jammers": []
+  },
+  "waypoints": [
+    {
+      "id": "wp_m1",
+      "name": "West Valley Check 1",
+      "position": { "x": 600, "y": 700 },
+      "value": 6,
+      "captured": false
+    },
+    {
+      "id": "wp_m2",
+      "name": "Pass Emergency Beacon 2",
+      "position": { "x": 1000, "y": 1000 },
+      "value": 10,
+      "needsUplink": true,
+      "captured": false
+    },
+    {
+      "id": "wp_m3",
+      "name": "East Village Drop 3",
+      "position": { "x": 1500, "y": 1400 },
+      "value": 8,
+      "captured": false
+    }
+  ]
+}

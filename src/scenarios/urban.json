@@ -1,0 +1,71 @@
+{
+  "id": "urban_inspection",
+  "name": "Urban Infrastructure Inspection",
+  "description": "Inspect highrise glass towers surrounded by severe building attenuation and heavy cellular congestion.",
+  "difficulty": "Hard",
+  "initialBatteryWh": 100,
+  "world": {
+    "mapSize": { "width": 2000, "height": 2000 },
+    "homePosition": { "x": 150, "y": 150 },
+    "geofence": { "xMin": 0, "xMax": 2000, "yMin": 0, "yMax": 2000 },
+    "towers": [
+      {
+        "id": "tower_north",
+        "name": "North Metro Cell",
+        "position": { "x": 500, "y": 300 },
+        "txPowerDbm": 30,
+        "height": 25,
+        "loadFactor": 0.4,
+        "isOnline": true
+      },
+      {
+        "id": "tower_south",
+        "name": "South Harbor Cell",
+        "position": { "x": 1600, "y": 1700 },
+        "txPowerDbm": 30,
+        "height": 25,
+        "loadFactor": 0.3,
+        "isOnline": true
+      }
+    ],
+    "obstacles": [
+      {
+        "id": "highrise_1",
+        "name": "Financial Center Tower A",
+        "bounds": { "xMin": 700, "xMax": 950, "yMin": 400, "yMax": 1600 },
+        "attenuationDb": 28
+      },
+      {
+        "id": "highrise_2",
+        "name": "Tech Hub Complex",
+        "bounds": { "xMin": 1150, "xMax": 1400, "yMin": 500, "yMax": 1300 },
+        "attenuationDb": 24
+      }
+    ],
+    "jammers": []
+  },
+  "waypoints": [
+    {
+      "id": "wp_u1",
+      "name": "Roof Sensor Check 1",
+      "position": { "x": 600, "y": 500 },
+      "value": 6,
+      "captured": false
+    },
+    {
+      "id": "wp_u2",
+      "name": "Canyon Facade Scan 2",
+      "position": { "x": 1050, "y": 1000 },
+      "value": 9,
+      "needsUplink": true,
+      "captured": false
+    },
+    {
+      "id": "wp_u3",
+      "name": "Substation Inspection 3",
+      "position": { "x": 1500, "y": 1500 },
+      "value": 7,
+      "captured": false
+    }
+  ]
+}

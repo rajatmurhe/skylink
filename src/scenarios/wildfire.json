@@ -1,0 +1,65 @@
+{
+  "id": "wildfire_surveillance",
+  "name": "Wildfire Surveillance",
+  "description": "Fly long range perimeter patrols while thermal interference zones and smoke plumes disrupt radio links.",
+  "difficulty": "Expert",
+  "initialBatteryWh": 100,
+  "world": {
+    "mapSize": { "width": 2000, "height": 2000 },
+    "homePosition": { "x": 200, "y": 1800 },
+    "geofence": { "xMin": 0, "xMax": 2000, "yMin": 0, "yMax": 2000 },
+    "towers": [
+      {
+        "id": "tower_base",
+        "name": "Forward Base Tower",
+        "position": { "x": 300, "y": 1600 },
+        "txPowerDbm": 35,
+        "height": 35,
+        "loadFactor": 0.1,
+        "isOnline": true
+      },
+      {
+        "id": "tower_outpost",
+        "name": "Ranger Outpost Tower",
+        "position": { "x": 1700, "y": 400 },
+        "txPowerDbm": 35,
+        "height": 35,
+        "loadFactor": 0.1,
+        "isOnline": true
+      }
+    ],
+    "obstacles": [],
+    "jammers": [
+      {
+        "id": "fire_storm_1",
+        "position": { "x": 1000, "y": 1000 },
+        "radius": 350,
+        "strengthDbm": -40
+      }
+    ]
+  },
+  "waypoints": [
+    {
+      "id": "wp_w1",
+      "name": "Fire Line Recon 1",
+      "position": { "x": 700, "y": 1300 },
+      "value": 7,
+      "captured": false
+    },
+    {
+      "id": "wp_w2",
+      "name": "Hotspot Thermal Scan 2",
+      "position": { "x": 1000, "y": 950 },
+      "value": 10,
+      "needsUplink": true,
+      "captured": false
+    },
+    {
+      "id": "wp_w3",
+      "name": "Outpost Evacuation Check 3",
+      "position": { "x": 1500, "y": 500 },
+      "value": 8,
+      "captured": false
+    }
+  ]
+}

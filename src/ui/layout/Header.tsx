@@ -1,0 +1,3 @@
+import { NavLink } from 'react-router-dom';
+import { Radio, ArrowUpRight } from 'lucide-react';
+export const Header = () => <header className="site-header"><div className="header-inner"><NavLink to="/" className="brand"><span className="brand-symbol"><Radio size={21}/></span>SKYLINK<span className="brand-version">/ 01</span></NavLink><nav aria-label="Main navigation">{[['/','Overview'],['/mission-control','Mission control'],['/flight-lab','Flight lab'],['/airframe','Airframe'],['/compare','Compare'],['/benchmark','Evidence'],['/submission','Course & viva']].map(([to,label])=><NavLink end={to==='/'} key={to} to={to}>{label}</NavLink>)}</nav><NavLink to="/mission-control" className="header-launch">Open simulator <ArrowUpRight size={15}/></NavLink></div></header>;
